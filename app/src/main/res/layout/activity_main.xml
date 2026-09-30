@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Smart Pantry Manager" android:textSize="28sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Track what you have and discover recipes you can make now."
+        android:textSize="15sp" android:paddingTop="4dp" android:paddingBottom="12dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button android:id="@+id/btnSuggestedRecipes" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Recipes" />
+        <Button android:id="@+id/btnSettings" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Settings" android:layout_marginStart="8dp" />
+    </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="My Pantry" android:textSize="20sp" android:textStyle="bold"
+        android:paddingTop="16dp" android:paddingBottom="8dp" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerPantry"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+    <TextView android:id="@+id/emptyPantryMessage" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Your pantry is empty. Add an ingredient to get started."
+        android:textSize="15sp" android:padding="16dp" android:gravity="center" android:visibility="gone" />
+    <Button android:id="@+id/btnAddIngredient" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="+ Add Ingredient" android:layout_marginTop="8dp" />
+</LinearLayout>
